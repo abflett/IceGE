@@ -10,7 +10,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)  # Include main header 
 
 # Define source files
 set(GAME_ENGINE_SRCS
-    src/IceGE/IceGE.cpp  # Assuming the source file is in src/IceGE
+    src/IceGE/Engine.cpp  # Assuming the source file is in src/IceGE
     # Other source files for your game engine
 )
 
