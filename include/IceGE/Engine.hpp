@@ -2,6 +2,8 @@
 
 #include <string>
 
+#include <SDL3/SDL.h>
+
 namespace IceGE
 {
 
