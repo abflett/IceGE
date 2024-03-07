@@ -14,8 +14,12 @@ set(GAME_ENGINE_SRCS
     src/IceGE/Engine.cpp
 )
 
-add_subdirectory(external/SDL/SDL)
+add_subdirectory(external)
 
 add_library(IceGE STATIC ${GAME_ENGINE_SRCS})
 
 target_link_libraries(IceGE PRIVATE SDL3::SDL3)
+
+add_library(IceGELib INTERFACE)
+
+target_link_libraries(IceGELib INTERFACE IceGE)
