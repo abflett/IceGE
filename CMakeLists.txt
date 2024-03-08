@@ -9,9 +9,9 @@ set(CMAKE_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(ICEGE_SRCS src/IceGE/Engine.cpp)
 
-add_subdirectory(external)
+add_subdirectory(external) # includes SDL and other external libs as INTERFACE lib
 
 add_library(IceGE ${ICEGE_SRCS})
-# target_include_directories(IceGE PUBLIC ${CMAKE_INCLUDE_DIRS})
+target_include_directories(IceGE PUBLIC ${CMAKE_INCLUDE_DIRS})
 
 target_link_libraries(IceGE PUBLIC external)
